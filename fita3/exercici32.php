@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Exemple de lectura de dades a MySQL</title>
+    <title>FITA 2 - EJERCICIO 3.2</title>
     <style>
         body {}
 
