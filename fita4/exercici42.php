@@ -30,17 +30,22 @@
     ?>
     
     <form method="post">
-        <label for="continentSelect"></label>
-        <select name="continentSelect" id="continentSelect">
-            <?php echo $opciones; ?>
-        </select>
+        <input type="checkbox" name="continent[]" value="North America">Norte America<br>
+        <input type="checkbox" name="continent[]" value="Asia">Asia<br>
+        <input type="checkbox" name="continent[]" value="Africa">Africa<br>
+        <input type="checkbox" name="continent[]" value="Europe">Europa<br>
+        <input type="checkbox" name="continent[]" value="South America">America del Sur<br>
+        <input type="checkbox" name="continent[]" value="Oceania">Oceania<br>
+        <input type="checkbox" name="continent[]" value="Antarctica">Antarctica<br>
+        <br>
         <input type="submit" name="Mostrar" value="Mostrar">
     </form>
 
     <?php
+    var_dump($_POST);
     # Verificamos si se ha enviado el formulario
-    if (isset($_POST["continentSelect"])) {
-        $continentSelect = $_POST["continentSelect"];
+    if (isset($_POST["continent"])) {
+        $continentSelect = $_POST["continent"];
 
         # (2.1) Consulta para obtener los países que hablan el idioma seleccionado
         $consulta = "SELECT c.name  FROM country c WHERE c.continent = '$continentSelect';";
