@@ -70,6 +70,8 @@
             # (3.5) tanquem la fila
             echo "\t</tr>\n";
         }
+
+        
         ?>
         <!-- (3.6) tanquem la taula -->
     </table>
